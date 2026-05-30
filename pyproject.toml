@@ -1,0 +1,12 @@
+[project]
+name = "req-agent"
+version = "0.1.0"
+description = "需求分析 Agent：从参考文档 + 新需求 → 生成结构化方案文档 + 页面原型"
+requires-python = ">=3.10"
+dependencies = [
+  "openai>=1.0",
+  "python-docx>=1.0",
+  "pymupdf>=1.24",
+  "openpyxl>=3.1",
+  "pyyaml>=6.0",
+]

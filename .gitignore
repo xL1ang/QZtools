@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# uv
+.python-version
+
+# 项目
+config.yaml
+output/
+
+# IDE
+.vscode/
+.idea/
+
+# 工具缓存
+.pi-lens/
+.ruff_cache/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -159,3 +159,16 @@ src/
 - 切换 provider 只需改 config.yaml 中的 `use_provider`
 - reader.py 返回 dict：`{"existing_logic": "...", "interfaces": "...", ...}`
 - analyzer.py 和 prototyper.py 职责分离
+
+### 11. 跨平台环境
+
+| 项目 | 决定 |
+|------|------|
+| Python 版本 | `>=3.10`，由 uv 自动管理 |
+| 路径处理 | 统一使用 `pathlib.Path` |
+| 文件编码 | 强制 `utf-8` |
+| 终端输出 | 简洁中文 + `[OK]` / `[...]`，不用花哨 emoji |
+| 用户只需安装 | uv（PowerShell 一行命令）|
+| 终端 | PowerShell |
+| 开发平台 | Linux |
+| 运行平台 | Windows（晴子的办公电脑）|
