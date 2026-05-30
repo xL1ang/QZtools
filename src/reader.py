@@ -79,9 +79,12 @@ def read_folder(folder: Path) -> str:
     parts = []
     for file_path in sorted(folder.iterdir()):
         if file_path.is_file() and file_path.name != ".gitkeep":
-            content = read_file(file_path)
-            if content:
-                parts.append(f"--- {file_path.name} ---\n{content}")
+            try:
+                content = read_file(file_path)
+                if content:
+                    parts.append(f"--- {file_path.name} ---\n{content}")
+            except Exception as e:
+                print(f"  [..] 跳过无法解析的文件: {file_path.name} ({e})")
 
     return "\n\n".join(parts)
 
